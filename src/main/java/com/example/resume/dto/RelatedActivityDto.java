@@ -1,11 +1,15 @@
 package com.example.resume.dto;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 @Getter
 @Setter
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class RelatedActivityDto {
+
+    private Long id;
 
     private String content;
 

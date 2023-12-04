@@ -2,12 +2,16 @@ package com.example.resume.dto;
 
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Pattern;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 @Getter
 @Setter
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class ProfileDto {
+
+    private Long id;
 
     @NotEmpty
     private String name;

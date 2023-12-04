@@ -1,0 +1,1 @@
+insert into major (id, name, grade) values (1, 'computer', '4.0');

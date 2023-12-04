@@ -1,8 +1,15 @@
 package com.example.resume.entity;
 
+import com.example.resume.dto.ProfileDto;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.NoArgsConstructor;
 
 @Entity
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class Profile {
 
     @Id
@@ -23,5 +30,16 @@ public class Profile {
 
     @Column
     private String address;
+
+    public ProfileDto toDto() {
+        return ProfileDto.builder()
+                .id(this.id)
+                .name(this.name)
+                .age(this.age)
+                .phone_number(this.phone_number)
+                .email(this.email)
+                .address(this.address)
+                .build();
+    }
 
 }

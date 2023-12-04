@@ -1,8 +1,15 @@
 package com.example.resume.entity;
 
+import com.example.resume.dto.CertificateDto;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.NoArgsConstructor;
 
 @Entity
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class Certificate {
 
     @Id
@@ -14,4 +21,12 @@ public class Certificate {
 
     @Column
     private String acquisition_date; // 취득일
+
+    public CertificateDto toDto() {
+        return CertificateDto.builder()
+                .id(this.id)
+                .name(this.name)
+                .acquisition_date(this.acquisition_date)
+                .build();
+    }
 }
