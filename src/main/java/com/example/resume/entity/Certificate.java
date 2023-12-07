@@ -5,11 +5,13 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 @Entity
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+@ToString
 public class Certificate {
 
     @Id
