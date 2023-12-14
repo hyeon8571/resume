@@ -23,11 +23,14 @@ public class Major {
 
     private String grade;
 
+    private  String degree;
+
     public MajorDto toDto() {
         return MajorDto.builder()
                 .id(this.id)
                 .name(this.name)
                 .grade(this.grade)
+                .degree(this.degree)
                 .build();
     }
 

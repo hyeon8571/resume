@@ -19,8 +19,11 @@ public class Profile {
     @Column(nullable = false)
     private String name;
 
-    @Column
-    private Integer age;
+    @Column(nullable = false)
+    private String job;
+
+    @Column(nullable = false)
+    private String birth;
 
     @Column(nullable = false)
     private String phone_number;
@@ -35,7 +38,8 @@ public class Profile {
         return ProfileDto.builder()
                 .id(this.id)
                 .name(this.name)
-                .age(this.age)
+                .job(this.job)
+                .birth(this.birth)
                 .phone_number(this.phone_number)
                 .email(this.email)
                 .address(this.address)

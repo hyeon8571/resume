@@ -1,7 +1,6 @@
 package com.example.resume.controller;
 
 import com.example.resume.dto.RelatedActivityDto;
-import com.example.resume.entity.RelatedActivity;
 import com.example.resume.service.RelatedActivityService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -9,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
+@CrossOrigin(origins = "http://localhost:5120")
 @RestController
 @RequestMapping("/api")
 @RequiredArgsConstructor

@@ -24,11 +24,15 @@ public class Certificate {
     @Column
     private String acquisition_date; // 취득일
 
+    @Column
+    private String authority;
+
     public CertificateDto toDto() {
         return CertificateDto.builder()
                 .id(this.id)
                 .name(this.name)
                 .acquisition_date(this.acquisition_date)
+                .authority(this.authority)
                 .build();
     }
 }

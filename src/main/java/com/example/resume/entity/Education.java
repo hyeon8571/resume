@@ -23,12 +23,15 @@ public class Education {
 
     private String period;
 
+    private String status;
+
     public EducationDto toDto() {
 
         return EducationDto.builder()
                 .id(this.id)
                 .name(this.name)
                 .period(this.period)
+                .status(this.status)
                 .build();
     }
 }
